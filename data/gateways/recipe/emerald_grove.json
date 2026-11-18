@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "gateways",
+  "pattern": ["FFF", "FAF", "FFF"],
+  "key": {
+    "F": { "tag": "minecraft:flowers" },
+    "A": { "item": "minecraft:ender_eye" }
+  },
+  "result": {
+    "id": "gateways:gate_pearl",
+    "count": 1,
+    "components": {
+      "minecraft:custom_data": { "gateway": "gateways:emerald_grove" }
+    }
+  }
+}

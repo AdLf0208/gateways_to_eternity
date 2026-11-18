@@ -1,0 +1,29 @@
+id = "gateways"
+name = "Gateways to Eternity"
+version = "0.2.0"
+description = """A port of Gateways to Eternity for Horizon: a gate pearl opens a gateway, the gateway runs
+its wave list, and each wave pays out when its mobs die. The slice carries one gateway,
+gateways:emerald_grove, with the jar's full four-wave list, its wave and completion rewards, the
+200-tick no-player grace period, out-of-leash re-placement, reward stacks split into fours that drop
+from the gateway, and the pearl's placement lift; /gateways open and /gateways list stand in for
+upstream's /open_gateway. There is no gateway entity yet, so no portal, boss bar, particles or
+sound; an open gateway does not survive a world reload; wave attribute modifiers, gear sets,
+entity_loot rewards, failure explosions, lives and the other seven gateway definitions are not
+carried."""
+authors = ["Shadows_of_Fire", "AdLf0208"]
+# A native mod: Rust in src/, compiled by the launcher against the game build [native] pins,
+# beside data/ and assets/. The id is the resource namespace and the only identity: Cargo's
+# package name and version are not the mod's.
+api = "0.2"
+# The installation side, not the hook's: the gateways run on the server, and single player's
+# integrated server belongs to the client installation, so "both".
+side = "both"
+# The one shared value every manifest carries ("May add blocks, items, mob effects and entity
+# types"): this package declares the gate pearl item, its recipe, its creative tab entry and lang
+# lines. The capability is a schema requirement even for a mod that registers nothing.
+capabilities = ["registries"]
+
+[native]
+game = "26.3"
+horizon = "0b14f8acfd97fa2c750e42795249dcc981178ca4"
+mixins = "e59da9094f0c2fdda6c627fe9eff22dec6a906f0"
